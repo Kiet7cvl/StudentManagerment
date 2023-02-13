@@ -34,7 +34,7 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
     throws ServletException, IOException {
-        
+         
                 String u =req.getParameter("User");
   	  String p =req.getParameter("Pass");
           String a = getServletConfig().getInitParameter("acc");

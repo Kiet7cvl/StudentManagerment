@@ -39,7 +39,7 @@ public class WelcomeServlet extends HttpServlet {
             out.println("<title>Servlet WelcomeServlet</title>");  
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Xin chao moi nguoi" + "</h1>");
+            out.println("<h1>Xin chao moi nguoi den voi trang WED" + "</h1>");
             out.println("</body>");
             out.println("</html>");
         } finally {
