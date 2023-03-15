@@ -52,23 +52,48 @@ html body {
     line-height: 70px;
     margin: 0px;
     background: rgba(33,29,29,0.97);
-    padding-bottom: 200px;
+    padding-bottom: 280px;
     padding-right: 0px;
     padding-left: 0px;
     padding-top: 30px;
 }
 #slider .subnav li {
-    padding-right: 30px;
+    padding-right: 81px;
 }
 #slider .subnav li a {
     text-decoration: none;
     list-style: none;
     color: white;
-    padding: 0 50px;
+    padding: 0 48px;
 }
-#slider .subnav li:hover,
-#slider  li:hover   {
+#slider .subnav li:hover{
      color: black;
      background-color: grey;
  }
+ #slider .content .content_home {
+     text-align: center;
+ }
+ #slider .content_major .major_create a {
+     margin-left: 40px;
+    text-decoration: none;
+    border: 1px solid gray;
+    background: #029baf;
+    color: white;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 30px;
+    padding-bottom: 12px;
+ }
+ #slider .content_major .major_create_buton {
+    text-align: center;
+    width: 100px;
+    color: white;
+    background-color: #029baf;
+    padding: 12px 0px;
+    margin-left: 40px;
+    border: 1px solid gray;
+    padding-top: 13px;
+ }
 
+    
+ 

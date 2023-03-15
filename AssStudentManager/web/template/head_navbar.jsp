@@ -12,6 +12,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
         <link rel="stylesheet" href="css/styleindex.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
     </head>
     <body>
 
@@ -23,10 +24,10 @@
 
                 <div class="header_out">   
                     <div>
-                        <p>User : ${username}</p>
+                        <p>User : ${sessionScope.username}</p>
                     </div> 
-                        <c:if test="${sessionScope.user != null}">
-                        <a href="logout">Log Out</a> 
+                    <c:if test="${sessionScope.user != null}">
+                        <a href="logout"> <i class="fa-solid fa-user"></i> Log Out</a> 
                     </c:if >
 
                     <c:if test="${sessionScope.user == null}">
@@ -36,17 +37,4 @@
 
 
                 </div>
-            </div>
-
-            <div id="slider">
-                <ul class="subnav">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Majors</a></li>
-                    <li><a href="#">Classes</a></li>
-                    <li><a href="#">Students manager</a></li>
-                    <li><a href="#">Lecturers manager</a></li>
-                    <li><a href="#">Subjects manager</a></li>
-                    <li><a href="#">Attendance managert</a></li>
-                </ul>
-
             </div>

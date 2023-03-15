@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,7 +17,7 @@
             <form action="login" method="POST">
                 <div style="background: #bbcfe1; height: 800px;">
                     <div style="margin-left: 550px;">
-                        <h1 style="padding-top: 170px; padding-left: 25px;" >Student Management System</h1>
+                        <h1 style="padding-top: 170px; padding-left: 10px;" > <i class="fa-solid fa-graduation-cap"></i> Student Management System</h1>
                         <div style="border: 3px solid black; width: fit-content; padding: 10px; background: white">
                             <table style="height: 130px;">
                                 <caption style="padding: 5px;" >You need to login to use</caption>

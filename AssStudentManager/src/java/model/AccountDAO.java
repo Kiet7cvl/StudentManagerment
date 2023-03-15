@@ -29,6 +29,7 @@ public class AccountDAO extends DBContext {
                 Account account = new Account();
                 account.setUsername(username);
                 account.setPassword(password);
+                account.setIsAdmin(x.getIsAdmin());
                 return account;
             }
 
@@ -47,7 +48,7 @@ public class AccountDAO extends DBContext {
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
-                Account x = new Account(rs.getString("username"), rs.getString("password"));
+                Account x = new Account(rs.getString("username"), rs.getString("password"), rs.getInt("isAdmin"));
                 cc.add(x);
 
             }
@@ -79,7 +80,7 @@ public class AccountDAO extends DBContext {
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
-                Account x = new Account(rs.getString("username"), rs.getString("password"));
+                Account x = new Account(rs.getString("username"), rs.getString("password"),rs.getInt("isAdmin"));
                 return x;
             }
         } catch (Exception e) {
