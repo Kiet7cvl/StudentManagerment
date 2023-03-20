@@ -28,13 +28,13 @@
                     <input style="margin: 0px 4px; width: 100px; background-color: #00bcd4; color: white; border: 1px solid black" type="submit" value="SEARCH" />
                     <select style="margin-right: 4px;" name="majorid" value="">
                         <option value="">MajorID</option>
-                        <c:forEach var="o" items="${sessionScope.subjectid}">
+                        <c:forEach var="o" items="${getAllMajor}">
                             <option value="${o.getMajorid()}">${o.getMajorid()}</option>
                         </c:forEach>
                     </select> 
                     <select name="classid" value="">
                         <option value="">ClassID</option>
-                        <c:forEach var="o" items="${sessionScope.classid}">
+                        <c:forEach var="o" items="${getAllClass}">
                             <option value="${o.getClassid()}">${o.getClassid()}</option>
                         </c:forEach>
                     </select> 

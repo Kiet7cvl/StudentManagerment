@@ -24,8 +24,7 @@ public class MajorLoad extends HttpServlet{
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Major> getAll = new MajorDAO().getAllMajor();
         req.setAttribute("getAll", getAll);
-        HttpSession session = req.getSession();
-        session.setAttribute("majorid", getAll);
+        
         req.getRequestDispatcher("major.jsp").forward(req, resp);
 
     }

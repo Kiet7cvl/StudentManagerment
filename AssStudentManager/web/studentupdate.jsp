@@ -129,8 +129,8 @@
                             <tr>
                                 <td></td>
                                 <td><select style="margin-left: 427px;width: 607px;height: 34px;background: #f2f2f2;" name="majorid">
-                                        <c:forEach var="o" items="${sessionScope.majorid}">
-                                            <option value="${o.getMajorid()}">${o.getMajorid()}</option>
+                                        <c:forEach var="p" items="${sessionScope.majorid}">
+                                            <option value="${p.getMajorid()}">${p.getMajorid()}</option>
                                         </c:forEach>
                                     </select></td>
                             </tr>
@@ -144,7 +144,7 @@
                                         <c:forEach var="o" items="${sessionScope.classid}">
                                             <option value="${o.getClassid()}">${o.getClassid()}</option>
                                         </c:forEach>
-                                    </select></td></td>
+                                    </select></td>
                             </tr>
 
                         </tbody>

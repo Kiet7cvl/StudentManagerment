@@ -4,13 +4,17 @@
  */
 package controller;
 
+import dal.Major;
 import dal.Student;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
+import model.ClassDAO;
+import model.MajorDAO;
 import model.StudentDAO;
 
 /**
@@ -21,6 +25,14 @@ public class StudentLoad extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        List<Major> getAllMajor = new MajorDAO().getAllMajor();
+        req.setAttribute("getAllMajor", getAllMajor);
+        HttpSession session = req.getSession();
+        session.setAttribute("majorid", getAllMajor);
+        
+        List<dal.Class> getAllClass = new ClassDAO().getAllClass();
+        req.setAttribute("getAllClass", getAllClass);
+        session.setAttribute("classid", getAllClass);
 //        List<Student> getAll = new StudentDAO().getAllStudent();
 //        req.setAttribute("getAll", getAll);
 //        req.getRequestDispatcher("student.jsp").forward(req, resp);

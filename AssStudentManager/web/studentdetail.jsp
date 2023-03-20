@@ -26,7 +26,7 @@
                             </tr>
                             <tr>
                                 <td><input style="width: 300px;margin: 0px 50px;height: 30px;background: #f2f2f2;" type="text" name="studentid" value="${sc.getStudentid()}" readonly="" /></td>
-                                <td><input style="margin-left: 20px;width: 600px;height: 30px;background: #f2f2f2;" type="text" name="name" value="${sc.name}" /></td>
+                                <td><input style="margin-left: 20px;width: 600px;height: 30px;background: #f2f2f2;" type="text" name="name" value="${sc.name}" readonly=""/></td>
                             </tr>
                             <tr>
                                 <td style="padding-left: 50px; padding-top: 15px;font-weight: bold;">Gender</td>
@@ -37,7 +37,7 @@
                                         <option value="1">Male</option>
                                         <option value="0">FeMale</option>
                                     </select></td>
-                                <td><input style="margin-left: 20px;width: 600px;height: 30px;background: #f2f2f2;" type="date" name="dob" value="${sc.getDob()}" /></td>
+                                    <td><input style="margin-left: 20px;width: 600px;height: 30px;background: #f2f2f2;" type="date" name="dob" value="${sc.getDob()}" readonly="" /></td>
                             </tr>
                             <tr>
                                 <td style="padding-left: 50px; padding-top: 15px;font-weight: bold;">Picture Of Student</td>
@@ -45,7 +45,7 @@
                             </tr>
                             <tr>
                                 <td style="display: block; height: 30px;background: #f2f2f2;border: 1px solid black;width: 306px;margin-left: 50px;"><input type="submit" value="Select File" disabled=""/> No photo to choose</td>
-                                <td><input style="margin-left: 20px;width: 600px;height: 30px;background: #f2f2f2;" type="text" name="cname" value="${sc.getCname()}" /></td>
+                                <td><input style="margin-left: 20px;width: 600px;height: 30px;background: #f2f2f2;" type="text" name="cname" value="${sc.getCname()}" readonly=""/></td>
                             </tr>
 
                         </tbody>
@@ -62,19 +62,19 @@
                                         <td style="padding-left: 20px; padding-top: 15px;font-weight: bold;">Place Of Birth</td>
                                     </tr>
                                     <tr>
-                                        <td><input style="margin-left: 20px;width: 600px;height: 30px;background: #f2f2f2;" type="text" name="pob" value="${sc.getPob()}" /></td>
+                                        <td><input style="margin-left: 20px;width: 600px;height: 30px;background: #f2f2f2;" type="text" name="pob" value="${sc.getPob()}" readonly="" /></td>
                                     </tr>
                                     <tr>
                                         <td style="padding-left: 20px; padding-top: 15px;font-weight: bold;">HomeTown</td>
                                     </tr>
                                     <tr>
-                                        <td><input style="margin-left: 20px;width: 600px;height: 30px;background: #f2f2f2;" type="text" name="ht" value="${sc.getHt()}" /></td>
+                                        <td><input style="margin-left: 20px;width: 600px;height: 30px;background: #f2f2f2;" type="text" name="ht" value="${sc.getHt()}"  readonly=""/></td>
                                     </tr>
                                     <tr>
                                         <td style="padding-left: 20px; padding-top: 15px;font-weight: bold;">Registered place of permanent residence</td>
                                     </tr>
                                     <tr>
-                                        <td><input style="margin-left: 20px;width: 600px;height: 30px;background: #f2f2f2;" type="text" name="prr" value="${sc.getPrr()}" /></td>
+                                        <td><input style="margin-left: 20px;width: 600px;height: 30px;background: #f2f2f2;" type="text" name="prr" value="${sc.getPrr()}" readonly=""/></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -90,8 +90,8 @@
                                 <td style="padding-left: 20px; padding-top: 15px;font-weight: bold;">CMND</td>
                             </tr>
                             <tr>
-                                <td><input style="width: 300px;margin: 0px 50px;height: 30px;background: #f2f2f2;" type="text" name="nien" value="${sc.getNien()}" /></td>
-                                <td><input style="margin-left: 20px;width: 600px;height: 30px;background: #f2f2f2;" type="text" name="CMND" value="${sc.getCMND()}" /></td>
+                                <td><input style="width: 300px;margin: 0px 50px;height: 30px;background: #f2f2f2;" type="text" name="nien" value="${sc.getNien()}" readonly=""/></td>
+                                <td><input style="margin-left: 20px;width: 600px;height: 30px;background: #f2f2f2;" type="text" name="CMND" value="${sc.getCMND()}" readonly=""/></td>
                             </tr>
 
                             <tr>
@@ -99,8 +99,8 @@
                                 <td style="padding-left: 20px; padding-top: 15px;font-weight: bold;">Gmail</td>
                             </tr>
                             <tr>
-                                <td><input style="width: 300px;margin: 0px 50px;height: 30px;background: #f2f2f2;" type="text" name="phone" value="${sc.getPhone()}" /></td>
-                                <td><input style="margin-left: 20px;width: 600px;height: 30px;background: #f2f2f2;" type="text" name="gmail" value="${sc.getGmail()}" /></td>
+                                <td><input style="width: 300px;margin: 0px 50px;height: 30px;background: #f2f2f2;" type="text" name="phone" value="${sc.getPhone()}" readonly=""/></td>
+                                <td><input style="margin-left: 20px;width: 600px;height: 30px;background: #f2f2f2;" type="text" name="gmail" value="${sc.getGmail()}" readonly=""/></td>
                             </tr>
                         </tbody>
                     </table>
@@ -113,9 +113,9 @@
                                 <td style="padding-left: 20px; padding-top: 15px;font-weight: bold;">Religion</td>                        
                             </tr>
                             <tr>
-                                <td><input style="width: 300px;margin: 0px 50px;height: 30px;background: #f2f2f2;" type="text" name="academicl" value="${sc.getAcadamicl()}" /></td>
-                                <td><input style="width: 250px;margin: 0px 20px;height: 30px;background: #f2f2f2;" type="text" name="nation" value="${sc.getNaion()}"/></td>
-                                <td><input style="width: 300px;margin: 0px 20px;height: 30px;background: #f2f2f2;" type="text" name="religion" value="${sc.getReligion()}"/></td>
+                                <td><input style="width: 300px;margin: 0px 50px;height: 30px;background: #f2f2f2;" type="text" name="academicl" value="${sc.getAcadamicl()}" readonly=""/></td>
+                                <td><input style="width: 250px;margin: 0px 20px;height: 30px;background: #f2f2f2;" type="text" name="nation" value="${sc.getNaion()}" readonly=""/></td>
+                                <td><input style="width: 300px;margin: 0px 20px;height: 30px;background: #f2f2f2;" type="text" name="religion" value="${sc.getReligion()}" readonly=""/></td>
                             </tr>
                         </tbody>
                     </table>
@@ -128,11 +128,7 @@
                             </tr>
                             <tr>
                                 <td></td>
-                                <td><select style="margin-left: 427px;width: 607px;height: 34px;background: #f2f2f2;" name="majorid">
-                                        <c:forEach var="o" items="${sessionScope.majorid}">
-                                            <option value="${o.getMajorid()}">${o.getMajorid()}</option>
-                                        </c:forEach>
-                                    </select></td>
+                                <td><input style="margin-left: 427px;width: 600px;height: 30px;background: #f2f2f2;" type="text" name="majorid" value="${sc.getMajorid()}" readonly="" /></td>
                             </tr>
                             <tr>
                                 <td></td>
@@ -140,11 +136,7 @@
                             </tr>
                             <tr>
                                 <td></td>
-                                <td><select style="margin-left: 427px;width: 607px;height: 34px;background: #f2f2f2;" name="classid">
-                                        <c:forEach var="o" items="${sessionScope.classid}">
-                                            <option value="${o.getClassid()}">${o.getClassid()}</option>
-                                        </c:forEach>
-                                    </select></td></td>
+                                <td><input style="margin-left: 427px;width: 600px;height: 30px;background: #f2f2f2;" type="text" name="classid" value="${sc.getClassid()}" readonly="" /></td>
                             </tr>
 
                         </tbody>

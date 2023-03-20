@@ -24,8 +24,7 @@ public class ClassLoad extends HttpServlet{
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Class> getAll = new ClassDAO().getAllClass();
         req.setAttribute("getAll", getAll);
-        HttpSession session = req.getSession();
-        session.setAttribute("classid", getAll);
+        
         req.getRequestDispatcher("class.jsp").forward(req, resp);
     }
 
