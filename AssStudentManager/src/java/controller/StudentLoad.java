@@ -4,28 +4,29 @@
  */
 package controller;
 
-import dal.Teacher;
+import dal.Student;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
-import model.TeacherDAO;
+import model.StudentDAO;
 
 /**
  *
  * @author ADMIN
  */
-public class TeacherLoad extends HttpServlet{
+public class StudentLoad extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        List<Teacher> getAll = new TeacherDAO().getAllTeacher();
+//        List<Student> getAll = new StudentDAO().getAllStudent();
 //        req.setAttribute("getAll", getAll);
-//        req.getRequestDispatcher("teacher.jsp").forward(req, resp);
-        
-        List<Teacher> getAll = new TeacherDAO().getAllTeacher();
+//        req.getRequestDispatcher("student.jsp").forward(req, resp);
+
+// Truy vấn dữ liệu từ cơ sở dữ liệu
+        List<Student> getAll = new StudentDAO().getAllStudent();
 
 // Số lượng bản ghi trên mỗi trang
         int recordsPerPage = 5;
@@ -49,7 +50,7 @@ public class TeacherLoad extends HttpServlet{
         endRecord = startRecord + recordsPerPage;
 
 // Lấy danh sách dữ liệu của trang hiện tại
-        List<Teacher> currentPageDataList = getAll.subList(startRecord, endRecord);
+        List<Student> currentPageDataList = getAll.subList(startRecord, endRecord);
 
 // Truyền dữ liệu trang hiện tại và tổng số trang đến JSP
         req.setAttribute("currentPage", currentPage);
@@ -57,13 +58,13 @@ public class TeacherLoad extends HttpServlet{
         req.setAttribute("currentPageDataList", currentPageDataList);
 
 // Forward request đến JSP
-        req.getRequestDispatcher("teacher.jsp").forward(req, resp);
+        req.getRequestDispatcher("student.jsp").forward(req, resp);
+
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-       
+
     }
-    
-    
+
 }

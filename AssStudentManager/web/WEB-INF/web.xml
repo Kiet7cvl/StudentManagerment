@@ -32,6 +32,10 @@
         <servlet-name>TeacherLoad</servlet-name>
         <servlet-class>controller.TeacherLoad</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>StudentLoad</servlet-name>
+        <servlet-class>controller.StudentLoad</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginSession</servlet-name>
         <url-pattern>/login</url-pattern>
@@ -51,6 +55,10 @@
     <servlet-mapping>
         <servlet-name>TeacherLoad</servlet-name>
         <url-pattern>/teacherload</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>StudentLoad</servlet-name>
+        <url-pattern>/studentload</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

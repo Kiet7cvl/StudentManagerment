@@ -7,7 +7,7 @@
         <li><a href="majorload"><i style="margin-right: 10px;" class="fa-solid fa-landmark"></i>Majors</a></li>
         <li><a href="classload"><i style="margin-right: 10px;" class="fa-solid fa-building"></i>Classes</a></li>
         <li><a href="subjectload"><i style="margin-right: 10px;" class="fa-sharp fa-solid fa-book"></i>Subjects</a></li>
-        <li><a href="#"><div style="display: inline-block;"><i style="margin-right: 10px;" class="fa-solid fa-graduation-cap"></i>Students Manager</div></a></li>
+        <li><a href="studentload"><div style="display: inline-block;"><i style="margin-right: 10px;" class="fa-solid fa-graduation-cap"></i>Students Manager</div></a></li>
         <li style="background-color: grey;" ><a href="teacherload"><div style="display: inline-block;"><i style="margin-right: 10px;" class="fa-solid fa-ruler"></i>Lecturers Manager</div></a></li>
     </ul>
 
@@ -61,7 +61,7 @@
                     </thead>
                     <tbody>
 
-                        <c:forEach items="${getAll}" var="op">
+                        <c:forEach items="${currentPageDataList}" var="op">
                             <tr>
 
                                 <td>${op.getStt()}</td>       
@@ -91,6 +91,24 @@
                     </tbody>
 
                 </table>   
+                <div style="margin-top: 20px;">
+                    <c:if test="${currentPage ne 1}">
+                    <a style="text-decoration: none; color: black; border: 1px solid; margin: 10px; padding: 4px;" href="?currentPage=${currentPage - 1}">Prev</a>
+                </c:if>
+                <c:forEach var="pageNumber" begin="1" end="${totalNoOfPages}">
+                    <c:choose>
+                        <c:when test="${pageNumber eq currentPage}">
+                            <b>${pageNumber}</b>
+                        </c:when>
+                        <c:otherwise>
+                            <a style="text-decoration: none; color: black; border: 1px solid; padding: 4px;"  href="?currentPage=${pageNumber}">${pageNumber}</a>
+                        </c:otherwise>
+                    </c:choose>
+                </c:forEach>
+                <c:if test="${currentPage ne totalNoOfPages}">
+                    <a style="text-decoration: none; color: black; border: 1px solid; margin: 10px; padding: 4px;"  href="?currentPage=${currentPage + 1}">Next</a>
+                </c:if>
+                </div>
             </div>
 
         </div>

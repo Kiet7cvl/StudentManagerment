@@ -27,6 +27,7 @@ public class SubjectLoad extends HttpServlet{
         HttpSession session = req.getSession();
         session.setAttribute("subjectid", getAll);
         req.getRequestDispatcher("subject.jsp").forward(req, resp);
+        
     }
 
     @Override

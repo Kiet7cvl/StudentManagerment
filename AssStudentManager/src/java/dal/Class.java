@@ -9,6 +9,7 @@ package dal;
  * @author ADMIN
  */
 public class Class {
+
     private int stt;
     private String classid;
     private String classname;

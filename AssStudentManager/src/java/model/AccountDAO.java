@@ -89,8 +89,8 @@ public class AccountDAO extends DBContext {
     }
 
     public static void main(String[] args) {
-        System.out.println(new AccountDAO().getAllAccountt());
- //       System.out.println(new AccountDAO().getAccountByUsernameAndPassword("Mod", "Mod"));
+//        System.out.println(new AccountDAO().getAllAccountt());
+        System.out.println(new AccountDAO().getAccountByUsernameAndPassword("Mod", "Mod"));
 
     }
 
