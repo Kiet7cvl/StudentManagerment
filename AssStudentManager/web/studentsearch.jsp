@@ -43,48 +43,57 @@
             </form>
 
             <div >
+               
                 <table style=" line-height: 1.7;" >
                     <hr/>
                     <thead>
+
                         <tr>
                             <th style="padding-right: 50px;" >STT</th>
                             <th style="padding-right: 90px;">StudentID</th>
-                            <th style="padding-right: 110px;">StudentName</th>
-                            <th style="padding-right: 100px;">Date Of Birth</th>
-                            <th style="padding-right: 100px;">ClassID</th>
+                            <th style="padding-right: 90px;">StudentName</th>
+                            <th style="padding-right: 70px;">Gender</th>
+                            <th style="padding-right: 70px;">Date Of Birth</th>
+                            <th style="padding-right: 80px;">ClassID</th>
                             <th style="padding-right: 50px;">MajorID</th>               
                             <th >Operation</th>
                         </tr>
                     </thead>
                     <tbody>
 
-                        <c:forEach items="${studentlist}" var="op">
+                        <c:forEach var="op" items="${studentlist}">
                             <tr>
                                 <td>${op.getStt()}</td>       
                                 <td>${op.getStudentid()}</td>
                                 <td>${op.getName()}</td>  
+                                <td>
+                                    <c:choose>
+                                        <c:when test="${op.isGender() == true}">
+                                            Male
+                                        </c:when>
+                                        <c:when test="${op.isGender() != true}">
+                                            Femal
+                                        </c:when>
+                                    </c:choose>
+                                </td>  
                                 <td>${op.getDob()}</td> 
                                 <td>${op.getClassid()}</td> 
-                                <td>${op.getMajorid()}</td>   
+                                <td>${op.getMajorid()}</td>                             
                                 <td>
+                                    <a style="margin-right: 10px;" href="studentdetail?sid=${op.getId()}"><i class="fa-sharp fa-regular fa-eye"></i></a>
                                     <c:if test="${sessionScope.user.isAdmin == 1}">
                                         <a href="studentupdate?sid=${op.getId()}"><i class="fa-sharp fa-regular fa-pen-to-square"></i></a>
-                                    <a href="#" onclick="Mess(${op.getId()})"><i class="fa-sharp fa-solid fa-trash"></i></a>
-<!--                                    <a style="margin-left: 10px;" href="studentcreate?sid=${op.getId()}"><i class="fa-sharp fa-solid fa-trash"></i></a>-->
-                                    </c:if>
-                                    
+                                        <a style="margin-left: 10px;" href="#" onclick="Mess(${op.getId()})"><i class="fa-sharp fa-solid fa-trash"></i></a>
+                                        </c:if>
+
                                 </td>
-                                </div>
-
                             </tr>
-                            
-
                         </c:forEach>
 
 
                     </tbody>
 
-                </table>   
+                </table> 
             </div>
 
         </div>
